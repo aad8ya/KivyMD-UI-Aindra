@@ -1,0 +1,551 @@
+BoxLayout:
+    orientation:'horizontal'
+
+    BoxLayout:
+        orientation:'vertical'
+        size_hint_x: 0.7
+
+        BoxLayout:
+            orientation:'horizontal'
+            size_hint_y: 0.3
+
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.4
+                
+                BoxLayout:
+                    orientation:'vertical'
+                    size_hint_y:0.6
+                
+                    Image:
+                        source:"Images/AINDRA.png"
+                        pos_hint:{"center_x":0.4, "center_y":0.5}
+                        size_hint_x:0.7
+    
+                BoxLayout:
+                    orientation:'horizontal'
+                    spacing:10
+                    padding:10
+                    size_hint_y:0.4
+                        
+                    MDIconButton:
+                        id:home
+                        icon:"home-outline"
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        user_font_size: "34sp"
+                        on_press:app.home()
+                        pos_hint:{"center_x":0.5, "center_y":0.5}
+
+
+                    MDRaisedButton:
+                        id:health_check
+                        text:"Health Check"
+                        font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                        md_bg_color: 0, 0.5, 1, 1
+                        on_press:app.health_check()
+                        pos_hint:{"center_x":0.5, "center_y":0.5}
+            
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.15
+
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.45
+                
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_y:0.05
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_y:0.3
+
+                    MDLabel:
+                        text:"DIRECTION INDICATION"
+                        halign:"center"
+                        font_name: 'Fonts/Montserrat/Montserrat-Regular.ttf'
+                
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_y:0.45
+
+                    BoxLayout:
+                        orientation:'vertical'
+
+                        MDIconButton:
+                            id:x_led
+                            icon:"circle"
+                            theme_text_color:"Custom"
+                            text_color: 1, 0, 0, 1
+                            user_font_size:"45sp"
+                            pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+
+                        MDLabel:
+                            text:"X"
+                            bold:True
+                            halign:"center"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.5, 1, 1
+
+                    
+                    BoxLayout:
+                        orientation:'vertical'
+
+                        MDIconButton:
+                            id:y_led
+                            icon:"circle"
+                            theme_text_color:"Custom"
+                            text_color: 0, 1, 0, 1
+                            user_font_size:"45sp"
+                            pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+                        MDLabel:
+                            text:"Y"
+                            bold:True
+                            halign:"center"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.5, 1, 1
+                    
+                    BoxLayout:
+                        orientation:'vertical'
+
+                        MDIconButton:
+                            id:z_led
+                            icon:"circle"
+                            theme_text_color:"Custom"
+                            text_color: 1, 1, 0, 1
+                            user_font_size:"45sp"
+                            pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+                        MDLabel:
+                            text:"Z"
+                            bold:True
+                            halign:"center"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.5, 1, 1
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_y:0.2
+        
+        BoxLayout:
+            orientation:'horizontal'
+            padding: 10
+            spacing: 10
+            size_hint_y: 0.7
+
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.2
+
+                MDLabel:
+                    text:'DIRECTION'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    font_size:15
+                
+                MDLabel:
+                    text:'X - UP'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+
+                MDLabel:
+                    text:'X - DOWN'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+                
+                MDLabel:
+                    text:'Y - UP'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+                
+                MDLabel:
+                    text:'Y - DOWN'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+                
+                MDLabel:
+                    text:'Z - UP'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+                
+                MDLabel:
+                    text:'Z - DOWN'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1
+
+            
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.36
+
+                MDLabel:
+                    text:'TRANSLATION STEPS'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    font_size:15
+                    halign:'center'
+                    size_hint_y:0.15
+                
+                BoxLayout:
+                    orientation:'vertical'
+                    size_hint_y:0.85
+                    spacing:10
+                    padding:5
+
+                    MDTextFieldRound:
+                        id:x_up_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                                            
+                    MDTextFieldRound:
+                        id:x_down_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:y_up_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:y_down_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:z_up_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:z_down_ts
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+            
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.25
+
+                MDLabel:
+                    text:'SPEED'
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    font_size:15
+                    halign:'center'
+                    size_hint_y:0.15
+                
+                BoxLayout:
+                    orientation:'vertical'
+                    size_hint_y:0.85
+                    spacing:10
+                    padding:5
+
+                    MDTextFieldRound:
+                        id:x_up_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:x_down_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:y_up_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:y_down_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:z_up_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+                    
+                    MDTextFieldRound:
+                        id:z_down_s
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                        size_hint:(.4,.4)
+                        halign:"center"
+                        normal_color: 1, 1, 1, 1
+                        color_active: 1, 1, 1, 1
+            
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_x:0.15
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.x_up_press(x_up_ts.text, x_up_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+                    
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.x_down_press(x_down_ts.text, x_down_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.y_up_press(y_up_ts.text, y_up_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.y_down_press(y_down_ts.text, y_down_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+            
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.z_up_press(z_up_ts.text, z_up_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+            
+                BoxLayout:
+                    orientation:'horizontal'
+                    size_hint_x:0.1
+                    
+                    MDIconButton:
+                        icon:'arrow-all'
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        on_press:app.z_down_press(z_down_ts.text, z_down_s.text)
+                        pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+    BoxLayout:
+        orientation:'vertical'
+        size_hint_x: 0.3
+
+        BoxLayout:
+            orientation:'vertical'
+            size_hint_y: 0.4
+            spacing:10
+            padding:10
+
+            MDLabel:
+                size_hint_y:0.2
+                text:'LIVE CAMERA'
+                halign:"center"
+                font_name: 'Fonts/Montserrat/Montserrat-Regular.ttf'
+            
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:0.65           
+                
+                Image:
+                    id:camera
+                    source:'Images/AINDRA.png'
+
+            BoxLayout:
+                orientation:'horizontal'
+                size_hint_y:0.15
+
+                BoxLayout:
+                    orientation:'vertical'
+                    size_hint_x:0.7
+
+                    MDRaisedButton:
+                        id:st_acq
+                        text:"Start Acquisition"
+                        font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                        font_size:12
+                        md_bg_color: 0, 0.5, 1, 1
+                        pos_hint:{"center_x":0.5, "center_y":0.5}
+                        on_press:app.st_acq()
+                        size_hint:(0.9, 0.7)
+
+                BoxLayout:
+                    orientation:'vertical'
+                    size_hint_x:0.3
+
+                    MDIconButton:
+                        id:vid_feed
+                        icon:"video"
+                        theme_text_color:"Custom"
+                        text_color: 0, 0.5, 1, 1
+                        user_font_size:"35sp"
+                        on_press:app.vid_feed()
+                        pos_hint:{"center_x":0.5, "center_y":0.5}
+                        size_hint:(0.9, 0.6)
+
+        
+        BoxLayout:
+            orientation:'horizontal'
+            size_hint_y: 0.6
+
+            BoxLayout:
+                orientation:'vertical'
+
+                MDLabel:
+                    text:"X"
+                    halign:"center"
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    size_hint_y:0.2
+
+                MDIconButton:
+                    icon:'arrow-up-drop-circle'
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:x_sl.value=x_sl.value+1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDSlider:
+                    id:x_sl
+                    orientation:'vertical'
+                    min:0
+                    max:100
+                    value:50
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDIconButton:
+                    icon:'arrow-down-drop-circle'
+                    text_color: 0, 0.5, 1, 1
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:x_sl.value=x_sl.value-1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+                
+            BoxLayout:
+                orientation:'vertical'
+
+                MDLabel:
+                    text:"Y"
+                    halign:"center"
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    size_hint_y:0.2
+
+                MDIconButton:
+                    icon:'arrow-up-drop-circle'
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:y_sl.value=y_sl.value+1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDSlider:
+                    id:y_sl
+                    orientation:'vertical'
+                    min:0
+                    max:100
+                    value:50
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDIconButton:
+                    icon:'arrow-down-drop-circle'
+                    text_color: 0, 0.5, 1, 1
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:y_sl.value=y_sl.value-1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+            
+            BoxLayout:
+                orientation:'vertical'
+
+                MDLabel:
+                    text:"Z"
+                    halign:"center"
+                    font_name: 'Fonts/Montserrat/Montserrat-SemiBold.ttf'
+                    size_hint_y:0.2
+
+                MDIconButton:
+                    icon:'arrow-up-drop-circle'
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:z_sl.value=z_sl.value+1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDSlider:
+                    id:z_sl
+                    orientation:'vertical'
+                    min:0
+                    max:100
+                    value:50
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
+
+                MDIconButton:
+                    icon:'arrow-down-drop-circle'
+                    text_color: 0, 0.5, 1, 1
+                    theme_text_color:"Custom"
+                    text_color: 0, 0.5, 1, 1
+                    user_font_size: "22sp"
+                    on_press:z_sl.value=z_sl.value-1
+                    pos_hint:{'center_x':0.5, 'center_y':0.5}
